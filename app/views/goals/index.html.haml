@@ -1,2 +1,9 @@
-- @goal.each do |goal|
-  %h2= link_to goal.name, goal
+- @goal.each_slice(3) do |goals|
+	.row
+		- goals.each do |goal|
+			.col-md-4
+				.goal
+					.image_wrapper
+						= link_to goal do
+							= image_tag goal.image.url(:medium)
+					%h2= link_to goal.name, goal

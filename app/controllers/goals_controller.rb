@@ -41,7 +41,7 @@ class GoalsController < ApplicationController
 	private
 
 	def goal_params
-    params.require(:goal).permit(:name, :description, :start_date, :target_amount)
+    params.require(:goal).permit(:name, :description, :start_date, :target_amount, :image)
 	end
 
 	def find_goal
