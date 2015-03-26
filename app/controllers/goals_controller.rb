@@ -5,7 +5,7 @@ class GoalsController < ApplicationController
 	
 
 	def index
-    @goal = Goal.all.order("created_at DESC")
+    @goal = Goal.where(user_id: current_user)
 	end
 
 	def show
