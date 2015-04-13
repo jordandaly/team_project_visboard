@@ -31,6 +31,8 @@ gem 'paperclip', '~> 4.2.1'
 
 gem 'devise', '~> 3.4.1'
 
+gem 'cocoon', '~> 1.2.6'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

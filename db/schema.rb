@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322194244) do
+ActiveRecord::Schema.define(version: 20150412142607) do
 
   create_table "goals", force: true do |t|
     t.string   "name"
@@ -26,8 +26,16 @@ ActiveRecord::Schema.define(version: 20150322194244) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
-  
-  add_index "goals", ["user_id"], name: "index_goals_on_user_id"
+
+  create_table "savings_deposits", force: true do |t|
+    t.integer  "amount"
+    t.date     "date"
+    t.integer  "goal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "savings_deposits", ["goal_id"], name: "index_savings_deposits_on_goal_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

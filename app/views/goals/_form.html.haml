@@ -4,5 +4,12 @@
   = f.input :start_date
   = f.input :target_amount
   = f.input :image
+  .col-md-6
+    %h3 Savings Deposit
+    #savings_deposits
+      = f.simple_fields_for :savings_deposits do |savings_deposit|
+        = render 'savings_deposit_fields', f: savings_deposit
+      .links
+        = link_to_add_association 'Add Savings Deposit', f, :savings_deposits, class: "btn btn-default add-button"
   = f.button :submit
         
