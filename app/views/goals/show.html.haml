@@ -1,22 +1,22 @@
 .main_content
-	#recipe_top.row
+	#goal_top.row
 		.col-md-4
 			= image_tag @goal.image.url(:medium), class: "goal_image"
 		.col-md-8
 			#goal_info
 				%h1= @goal.name
-				%p= @goal.description
-				%p= @goal.start_date
-				%p= @goal.target_amount
+				%p.description= @goal.description
+				%p.description= @goal.start_date
+				%p.description= @goal.target_amount
 
 	.row
 		.col-md-6
-			#savings_deposits
+			#goal_info
 				%h2 Savings Deposits
-				%ul
+				%dl
 					- @goal.savings_deposits.each do |savings_deposit|
-						%li= savings_deposit.amount
-						%li= savings_deposit.date
+						%dt.description= savings_deposit.amount
+						%dd.description= savings_deposit.date
 
 		
 	.row

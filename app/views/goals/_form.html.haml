@@ -1,9 +1,10 @@
-= simple_form_for @goal do |f|
-  = f.input :name
-  = f.input :description
-  = f.input :start_date
-  = f.input :target_amount
-  = f.input :image
+= simple_form_for @goal, html: { multipart: true } do |f|
+  .panel-body
+    = f.input :name, input_html: { class: 'form-control' }
+    = f.input :description, input_html: { class: 'form-control' }
+    = f.input :start_date, input_html: { class: 'form-control' }
+    = f.input :target_amount, input_html: { class: 'form-control' }
+    = f.input :image, input_html: { class: 'form-control' }
   .col-md-6
     %h3 Savings Deposit
     #savings_deposits
@@ -11,5 +12,5 @@
         = render 'savings_deposit_fields', f: savings_deposit
       .links
         = link_to_add_association 'Add Savings Deposit', f, :savings_deposits, class: "btn btn-default add-button"
-  = f.button :submit
+  = f.button :submit, class: "btn btn-primary"
         
