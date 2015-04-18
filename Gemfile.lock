@@ -59,8 +59,11 @@ GEM
     execjs (2.4.0)
     haml (4.0.6)
       tilt
+    highcharts (0.0.3)
+      ice_cube (= 0.7.7)
     hike (1.2.3)
     i18n (0.7.0)
+    ice_cube (0.7.7)
     jbuilder (2.2.12)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -152,6 +155,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.1)
   haml (~> 4.0.6)
+  highcharts (~> 0.0.3)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2.1)
@@ -161,5 +165,5 @@ DEPENDENCIES
   simple_form (~> 3.1.0)
   spring
   sqlite3
-  turbolinks
+  turbolinks (~> 2.5.3)
   uglifier (>= 1.3.0)

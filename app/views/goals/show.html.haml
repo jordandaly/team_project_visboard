@@ -8,6 +8,7 @@
 				%p.description= @goal.description
 				%p.description= @goal.start_date
 				%p.description= @goal.target_amount
+				
 
 	.row
 		.col-md-6
@@ -17,6 +18,12 @@
 					- @goal.savings_deposits.each do |savings_deposit|
 						%dt.description= savings_deposit.amount
 						%dd.description= savings_deposit.date
+            
+		.row
+			.col-md-6
+				#goal_info
+					= render :partial => "savings_chart"
+
 
 		
 	.row
@@ -25,3 +32,5 @@
 			- if user_signed_in?
 				= link_to "Edit", edit_goal_path, class: "btn btn-default"
 				= link_to "Delete", goal_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
+
+        
