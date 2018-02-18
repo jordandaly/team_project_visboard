@@ -1,5 +1,9 @@
 == README
 
+To run app from Cloud9 IDE
+bundle update (if gems need to be updated)
+rails s -b $IP -p $PORT (to start server)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

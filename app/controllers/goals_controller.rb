@@ -20,6 +20,8 @@ class GoalsController < ApplicationController
     
     if @goal.save
 			redirect_to @goal, notice: "Successfully created new goal"
+		else
+			render "new"
     end
   end
   
